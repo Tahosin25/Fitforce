@@ -1,0 +1,332 @@
+/* ========================================
+   FITFORCE - RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.75rem;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .about-grid,
+    .classes-grid,
+    .pricing-grid,
+    .calculator-grid,
+    .contact-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .floating-card {
+        width: 240px;
+        padding: 20px;
+        bottom: -30px;
+    }
+
+    .card-info h3 { font-size: 1rem; }
+    .card-info p { font-size: 0.8rem; }
+
+    .about-grid {
+        gap: 40px;
+    }
+
+    .about-img {
+        height: 300px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .class-filters {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        gap: 40px;
+    }
+
+    .contact-form {
+        padding: 30px 25px;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-newsletter {
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 0;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .mobile-menu {
+        max-width: 280px;
+        padding: 30px 20px;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-cta {
+        gap: 15px;
+    }
+
+    .btn-lg {
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .footer-grid {
+        gap: 30px;
+    }
+
+    .about-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-card,
+    .calc-card,
+    .contact-form {
+        padding: 30px 20px;
+    }
+}
+
+/* Dark mode toggle icon swap */
+.theme-toggle .fa-moon,
+.theme-toggle .fa-sun {
+    display: none;
+}
+
+.theme-toggle .fa-moon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+    display: block;
+}
+/* Class Card Styles */
+.class-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+[data-theme="dark"] .class-card {
+    background: var(--light-color);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.class-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.class-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.class-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.class-card:hover .class-img {
+    transform: scale(1.1);
+}
+
+.class-type {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.class-info {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.class-time {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.class-intensity {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.class-title {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.class-trainer {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.class-details {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.class-details i {
+    color: var(--primary-color);
+    width: 16px;
+}
+
+.class-btn {
+    width: 100%;
+    padding: 12px;
+}
